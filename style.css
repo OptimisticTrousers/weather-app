@@ -40,3 +40,8 @@ button{
     width: 100px;
     height: 100px;
 }
+
+.weather-detail{
+    display: flex;
+    justify-content: space-between;
+}
