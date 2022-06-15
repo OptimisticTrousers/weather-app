@@ -1,1 +1,1 @@
-!function(e,o="US"){fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${"07087"},${o}&appid=ee8c332cbd72a23de5f8e2a32d0e2337`).then((e=>e.json())).then((e=>console.log(e)))}();
+(()=>{const e="ee8c332cbd72a23de5f8e2a32d0e2337";let t,o;((a,p="US")=>{fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${"07087"},${p}&appid=${e}`).then((e=>e.json())).then((a=>{t=a.lat,o=a.lon,fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${t}&lon=${o}&appid=${e}`).then((e=>e.json())).then((e=>console.log(e))),console.log(a,t,o)}))})()})();
