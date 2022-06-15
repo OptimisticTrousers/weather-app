@@ -13,7 +13,7 @@ const fetchWeatherData = (
     .then((data) => console.log(data));
 };
 
-const fetchGeolocationData = (zipCode, countryCode = "US") => {
+export default fetchGeolocationData = (zipCode, countryCode = "US") => {
   fetch(
     `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${API_KEY}`
   )
