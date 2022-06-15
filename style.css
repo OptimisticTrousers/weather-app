@@ -7,9 +7,11 @@
 body {
   min-height: 100vh;
   background-image: url("/dist/images/watercolor-background.jpg");
+  display: grid;
 }
 
 main {
+    margin: auto;
     display: flex;
     flex: 1;
     background-color: red;
