@@ -40,6 +40,9 @@ div.overview{
     background-color: red;
     width: 100%;
 }
+h1{
+    grid-area: title;
+}
 
 .recent-location > p{
 line-height: 2rem;
