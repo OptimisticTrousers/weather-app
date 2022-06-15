@@ -22,8 +22,21 @@ main {
 }
 
 div.info{
+    text-align: left;
     display: flex;
     background-color: red;
     flex-direction: column;
-    opacity: 0.9;
+    gap: 100px;
+}
+
+.recent-location > p{
+line-height: 2rem;
+}
+
+button{
+
+    background-color: #ef7901;
+    border: 0;
+    width: 100px;
+    height: 100px;
 }
