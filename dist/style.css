@@ -12,8 +12,14 @@ body {
 
 main {
     margin: auto;
-    display: flex;
-    flex: 1;
+    display: grid;
+    grid-template-areas: 
+    "title . . aside aside"
+    ". . . aside aside"
+    ". . . aside aside"
+    ". . . aside aside"
+    "overview overview . aside aside";
+    grid-template-columns: repeat(3, 25%) repeat(2, 1fr);
     width: 60%;
     height: 80%;
     background-image: url('images/test.jpg');
@@ -22,11 +28,17 @@ main {
 }
 
 div.info{
-    text-align: left;
+    grid-area: aside;
     display: flex;
     background-color: red;
     flex-direction: column;
     gap: 100px;
+}
+
+div.overview{
+    grid-area: overview;
+    background-color: red;
+    width: 100%;
 }
 
 .recent-location > p{
