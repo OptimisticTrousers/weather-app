@@ -14,10 +14,16 @@ main {
     margin: auto;
     display: flex;
     flex: 1;
-    background-color: red;
+    width: 60%;
+    height: 80%;
+    background-image: url('images/test.jpg');
+    background-size: cover;
+    justify-content: end;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
+div.info{
+    display: flex;
+    background-color: red;
+    flex-direction: column;
+    opacity: 0.9;
 }
