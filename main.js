@@ -1,1 +1,1 @@
-console.log("bob");
+!function(e,o="US"){fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${"07087"},${o}&appid=ee8c332cbd72a23de5f8e2a32d0e2337`).then((e=>e.json())).then((e=>console.log(e)))}();
