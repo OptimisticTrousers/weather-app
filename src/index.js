@@ -1,8 +1,10 @@
 const API_KEY = "ee8c332cbd72a23de5f8e2a32d0e2337";
 
-function fetchGeolocationData(city, state, limit = 5) {
+function fetchGeolocationData(zipCode, countryCode = "US") {
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city_name},${state_code},{country code}&limit=${limit}&appid=${API_KEY}`
-  );
+    `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${API_KEY}`
+  )
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 }
-console.log("bob");
+fetchGeolocationData("07087");
