@@ -1,0 +1,5 @@
+# Ignore artifacts:
+node_modules
+.eslint.json
+settings.json
+main.js
