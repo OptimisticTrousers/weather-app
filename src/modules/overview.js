@@ -13,6 +13,3 @@ export default function renderOverviewData(weatherData) {
   time.textContent = fromUnixTime(weatherData.dt);
   weatherType.textContent = condition;
 }
-
-function renderIcon(condition){
-}
