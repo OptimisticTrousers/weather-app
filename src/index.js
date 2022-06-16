@@ -1,5 +1,5 @@
 import renderOverviewData from "./modules/overview";
-import renderWeatherDetails from "./modules/info";
+import renderWeatherDetails from "./modules/weatherDetails";
 
 const API_KEY = "ee8c332cbd72a23de5f8e2a32d0e2337";
 

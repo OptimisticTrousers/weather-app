@@ -10,7 +10,7 @@ export default function renderWeatherDetails(weatherData) {
   );
   const wind = document.querySelector(".weather-detail.wind> p:nth-child(2)");
 
-  description.textContent += weatherData.weather[0].description;
+  description.textContent = `Description: ${weatherData.weather[0].description}`;
 
   cloudy.textContent = `${weatherData.clouds.all}%`;
 
