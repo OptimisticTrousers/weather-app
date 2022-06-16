@@ -184,8 +184,12 @@ button:hover {
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 3rem;
   }
+  .location > p.time{
+    font-size: 3vw;
+  }
   div.overview{
     padding: 0;
+    padding-left: 1rem;
   }
   div.info{
     height: inherit
