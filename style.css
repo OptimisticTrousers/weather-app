@@ -82,6 +82,9 @@ h2 {
   font-weight: bolder;
   color: #e8dfdc;
 }
+div.cities > p:hover{
+    color: #EBF5EE;
+}
 
 .recent-location,
 .weather-details {
