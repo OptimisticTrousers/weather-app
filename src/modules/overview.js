@@ -1,3 +1,5 @@
+import fromUnixTime from 'date-fns/fromUnixTime'
+
 export default function renderOverviewData(weatherData) {
   const degrees = document.querySelector("p.degrees");
   const city = document.querySelector("p.city");
@@ -9,7 +11,7 @@ export default function renderOverviewData(weatherData) {
 
   degrees.textContent = `${Math.round(weatherData.main.temp)}°`;
   city.textContent = `${weatherData.name}, ${weatherData.sys.country}`;
-  time.textContent = weatherData.dt;
+  time.textContent = fromUnixTime(weatherData.dt);
   weatherType.textContent = condition;
 }
 
