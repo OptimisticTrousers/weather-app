@@ -153,6 +153,12 @@ button {
   border-radius: inherit;
 }
 
+button:hover{
+
+    cursor: pointer;
+    background-color: #F18F01;
+}
+
 .weather-detail {
   display: flex;
   justify-content: space-between;
