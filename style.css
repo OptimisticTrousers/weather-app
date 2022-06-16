@@ -50,8 +50,8 @@ div.overview {
   align-items: center;
   grid-area: overview;
   width: 100%;
-  padding-left: 2rem;
-  padding-top: 2rem;
+  padding-left: 6rem;
+  padding-top: 6rem;
 }
 
 div.info p {
