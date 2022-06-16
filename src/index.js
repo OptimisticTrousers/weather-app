@@ -1,3 +1,4 @@
+import addCityToHistory from "./modules/history";
 import renderOverviewData from "./modules/overview";
 import renderWeatherDetails from "./modules/weatherDetails";
 
@@ -44,8 +45,10 @@ const fetchData = (zipCode) => {
     const forecastData = fetchForecast(latitude, longitude);
 
     Promise.all([weatherData, forecastData]).then((data) => {
+      console.log(data[0])
       renderOverviewData(data[0]);
       renderWeatherDetails(data[0], latitude, longitude);
+      addCityToHistory(data[0]);
     }).catch(error => console.log(error));
   });
 };
