@@ -50,6 +50,7 @@ div.overview {
   align-items: center;
   grid-area: overview;
   width: 100%;
+  gap: 10px;
   padding-left: 6rem;
   padding-top: 6rem;
   padding-bottom: 3rem;
@@ -62,7 +63,7 @@ div.overview > p:nth-child(1) {
   font-weight: 600;
   font-size: 120px;
 }
-.location > p:nth-child(1) {
+.location > p.city {
   margin: 0;
   font-weight: 500;
   font-size: 80px;
@@ -72,7 +73,11 @@ div.overview > p:nth-child(1) {
 .location > p:nth-child(2) {
   font-weight: 500;
   margin: 0;
-  font-size: 28px;
+  font-size: 32px;
+}
+
+.location > p.type{
+    font-size: 24px;
 }
 h1 {
   grid-area: title;

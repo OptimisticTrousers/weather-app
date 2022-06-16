@@ -4,8 +4,7 @@ export default function renderOverviewData(weatherData) {
   const degrees = document.querySelector("p.degrees");
   const city = document.querySelector("p.city");
   const time = document.querySelector("p.time");
-  const weatherType = document.querySelector(".weather-type > p");
-  const weatherIcon = document.querySelector(".weather-type > img");
+  const weatherType = document.querySelector("p.type");
 
   const condition = weatherData.weather[0].main;
 
