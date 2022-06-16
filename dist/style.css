@@ -21,9 +21,13 @@ main {
   width: 70%;
   height: 90%;
   border-radius: 15px;
-  background-image: url("images/cloud.jpg");
   background-size: cover;
   justify-content: end;
+}
+
+.background{
+  background-image: url("images/cloud.jpg");
+
 }
 
 .day-forecast{
