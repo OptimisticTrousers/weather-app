@@ -23,9 +23,9 @@ const fetchForecast = async (latitude, longitude) => {
   return response.json();
 };
 
-const fetchGeolocationData = async (zipCode, countryCode = "US") => {
+const fetchGeolocationData = async (cityName, stateCode, countryCode = "US") => {
   const response = await fetch(
-    `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityName},${stateCode},${countryCode}&appid=${API_KEY}`
   );
   return response.json();
 };
