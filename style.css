@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   min-height: 100vh;
@@ -19,7 +14,7 @@ main {
     ". . . aside aside"
     ". . . aside aside"
     "overview overview . aside aside";
-  grid-template-columns: repeat(3, 25%) repeat(2, 1fr);
+  grid-template-columns: repeat(3, 24%) repeat(2, 1fr);
   width: 60%;
   height: 80%;
   background-image: url("images/finalweather.jpg");
@@ -55,6 +50,7 @@ h1 {
 }
 
 form{
+    padding-bottom: 2rem;
 }
 form > div{
     display: flex;
@@ -63,8 +59,13 @@ form > div{
 
 label{
     padding-top: 3rem;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
     align-self: end;
+}
+
+.recent-location, .weather-details{
+
+    padding-left: 1.5rem;
 }
 
 .recent-location > p,
