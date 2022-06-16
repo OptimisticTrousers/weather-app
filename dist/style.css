@@ -19,8 +19,8 @@ main {
     ". . . aside aside"
     "overview overview . aside aside";
   grid-template-columns: repeat(3, 24%) repeat(2, 1fr);
-  width: 70%;
-  height: 90%;
+  width: 70vw;
+  height: 90vh;
   border-radius: 15px;
   background-size: cover;
   background-image: url("images/overcast.jpg");
@@ -43,6 +43,7 @@ div.info {
   flex-direction: column;
   overflow: auto;
   font-family: "Fira Sans";
+  height: inherit;
 }
 
 div.overview {
@@ -145,11 +146,11 @@ input {
 
 .recent-location > p,
 .weather-detail > p {
-  line-height: 2rem;
+  line-height: 1rem;
 }
 
 .weather-details > h2 {
-  line-height: 4rem;
+  line-height: 3rem;
 }
 
 button {
@@ -168,4 +169,8 @@ button:hover {
 .weather-detail {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 1080px) {
+    
 }
