@@ -37,9 +37,6 @@ const fetchData = (cityName = "Berlin", stateCode = "", countryCode = "") => {
 
     const longitude = geolocationData[0].lon;
 
-    // console.log(weatherData)
-    // renderOverviewData(weatherData);
-
     const weatherData = fetchWeatherData(latitude, longitude);
     const forecastData = fetchForecast(latitude, longitude);
 
