@@ -15,8 +15,9 @@ main {
     ". . . aside aside"
     "overview overview . aside aside";
   grid-template-columns: repeat(3, 24%) repeat(2, 1fr);
-  width: 60%;
-  height: 80%;
+  width: 70%;
+  height: 90%;
+  border-radius: 15px;
   background-image: url("images/finalweather.jpg");
   background-size: cover;
   justify-content: end;
@@ -61,7 +62,7 @@ form > div{
 
 label{
     padding-top: 3rem;
-    padding-left: 1.5rem;
+    padding-left: 2.5rem;
     align-self: end;
 }
 
@@ -84,6 +85,7 @@ button {
   border: 0;
   width: 70px;
   height: 70px;
+  border-radius: inherit;
 }
 
 .weather-detail {
