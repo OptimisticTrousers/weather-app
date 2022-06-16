@@ -28,6 +28,7 @@ div.info {
   display: flex;
   background-color: red;
   flex-direction: column;
+  overflow: auto;
 }
 
 
@@ -40,6 +41,10 @@ align-items: center;
   width: 100%;
   padding-left: 2rem;
   padding-top: 2rem;
+}
+
+div.info p {
+    font-size: 20px;
 }
 div.overview > p:nth-child(1){
     font-size: 72px;
