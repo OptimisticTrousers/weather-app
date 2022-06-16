@@ -44,8 +44,13 @@ h1{
     grid-area: title;
 }
 
-.recent-location > p{
+.recent-location > p, .weather-detail > p{
+    
 line-height: 2rem;
+}
+
+.weather-details > h2{
+line-height: 6rem;
 }
 
 button{
