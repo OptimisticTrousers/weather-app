@@ -14,8 +14,8 @@ button.addEventListener("click", (event) => {
   const input = document.querySelector("input");
 
   console.log(input.value);
-  fetchData(input.value);
+  fetchData();
   form.reset();
 });
 
-fetchData("07094")
+fetchData();

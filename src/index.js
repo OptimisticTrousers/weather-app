@@ -23,20 +23,19 @@ const fetchForecast = async (latitude, longitude) => {
   return response.json();
 };
 
-const fetchGeolocationData = async (cityName, stateCode, countryCode = "US") => {
+const fetchGeolocationData = async (cityName , stateCode, countryCode, limit="5") => {
   const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${cityName},${stateCode},${countryCode}&appid=${API_KEY}`
+    `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=${limit}&appid=${API_KEY}`
   );
   return response.json();
 };
 
-const fetchData = (zipCode) => {
-  fetchGeolocationData(zipCode).then((geolocationData) => {
-    console.log(geolocationData);
+const fetchData = (cityName = "London", stateCode = "", countryCode = "") => {
+  fetchGeolocationData(cityName, stateCode, countryCode).then((geolocationData) => {
 
-    const latitude = geolocationData.lat;
+    const latitude = geolocationData[0].lat;
 
-    const longitude = geolocationData.lon;
+    const longitude = geolocationData[0].lon;
 
     // console.log(weatherData)
     // renderOverviewData(weatherData);
@@ -45,7 +44,6 @@ const fetchData = (zipCode) => {
     const forecastData = fetchForecast(latitude, longitude);
 
     Promise.all([weatherData, forecastData]).then((data) => {
-      console.log(data[0])
       renderOverviewData(data[0]);
       renderWeatherDetails(data[0], latitude, longitude);
       addCityToHistory(data[0]);
