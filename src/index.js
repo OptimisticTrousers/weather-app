@@ -1,47 +1,49 @@
+import { format } from "prettier";
+
 const API_KEY = "ee8c332cbd72a23de5f8e2a32d0e2337";
 
-const fetchWeatherData = (
+const fetchWeatherData = async (
   latitude,
   longitude,
   units = "imperial",
   language = "en"
 ) => {
-  fetch(
+  const response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&units=${units}&lang=${language}&lon=${longitude}&appid=${API_KEY}`
-  )
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+  );
+  const json = await response.json();
+  console.log(json);
+  return json;
 };
 
-function fetchForecast(latitude, longitude) {
-  fetch(
+const fetchForecast = async (latitude, longitude) => {
+  const response = await fetch(
     `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
-  )
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-}
-
-const fetchGeolocationData = (zipCode, countryCode = "US") => {
-  fetch(
-    `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${API_KEY}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      const latitude = data.lat;
-      const longitude = data.lon;
-      fetchWeatherData(latitude, longitude);
-      fetchForecast(latitude, longitude);
-    });
+  );
+  const json = await response.json();
+  console.log(json);
+  return json;
 };
-export default fetchGeolocationData;
 
-const button = document.querySelector('button');
+const fetchGeolocationData = async (zipCode, countryCode = "US") => {
+  const response = await fetch(
+    `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${API_KEY}`
+  );
+  return response.json();
+};
 
-button.addEventListener('click', ()=> {
+const fetchData = (zipCode) => {
+  fetchGeolocationData(zipCode).then((data) => {
 
-    const input = document.querySelector('input');
+    console.log(data);
 
-    console.log(fetchGeolocationData(input.value));
+    const latitude = data.lat;
 
-})
-fetchGeolocationData("07087");
+    const longitude = data.lon;
+
+    fetchWeatherData(latitude, longitude);
+
+    fetchForecast(latitude, longitude);
+  });
+};
+export default fetchData;
