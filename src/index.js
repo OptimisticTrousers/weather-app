@@ -44,9 +44,8 @@ const fetchData = (zipCode) => {
     const forecastData = fetchForecast(latitude, longitude);
 
     Promise.all([weatherData, forecastData]).then((data) => {
-      console.log(data);
       renderOverviewData(data[0]);
-      renderWeatherDetails(data[0]);
+      renderWeatherDetails(data[0], latitude, longitude);
     }).catch(error => console.log(error));
   });
 };

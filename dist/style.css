@@ -83,6 +83,7 @@ h2 {
   color: #e8dfdc;
 }
 div.cities > p:hover{
+    cursor: pointer;
     color: #EBF5EE;
 }
 
