@@ -45,8 +45,10 @@ h1 {
   grid-area: title;
 }
 
-.recent-location{
+.recent-location, .weather-details{
     border-bottom: 1px solid white;
+    width: 70%;
+    margin: 0 auto;
 }
 
 form{
