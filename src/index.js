@@ -41,9 +41,10 @@ const fetchData = (zipCode) => {
 
     const longitude = data.lon;
 
-    fetchWeatherData(latitude, longitude);
+    const weatherData = fetchWeatherData(latitude, longitude);
 
-    fetchForecast(latitude, longitude);
+    const forecastData = fetchForecast(latitude, longitude);
+
   });
 };
 export default fetchData;
