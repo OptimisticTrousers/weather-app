@@ -26,6 +26,11 @@ main {
   justify-content: end;
 }
 
+.day-forecast{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .weather-detail > p:nth-child(2) {
   color: #e6eced;
 }
@@ -86,8 +91,11 @@ h2 {
 }
 
 .forecast {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
+}
+.forecast > h2{
+    text-align: center;
 }
 
 .recent-location {
