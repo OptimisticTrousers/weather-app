@@ -44,8 +44,8 @@ const fetchData = (cityName = "Berlin", stateCode = "", countryCode = "") => {
       renderOverviewData(data[0]);
       renderWeatherDetails(data[0], latitude, longitude);
       addCityToHistory(data[0]);
-    }).catch(error => console.log(error));
-  });
+    }).catch((error)=> console.log(error));
+  }).catch(()=> alert("Please enter the location in the specified format: City, State(optional), Country(optional)"));
 };
 
 export default fetchData;

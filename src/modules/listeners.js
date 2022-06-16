@@ -17,4 +17,7 @@ button.addEventListener("click", (event) => {
   form.reset();
 });
 
-fetchData();
+fetchData("New York City", "NY", "US");
+fetchData("Las Vegas", "NV", "US");
+fetchData("Chicago", "LI", "US");
+fetchData("London");
