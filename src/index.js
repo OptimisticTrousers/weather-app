@@ -1,4 +1,5 @@
 import renderOverviewData from "./modules/overview";
+import renderInformationData from "./modules/info";
 
 const API_KEY = "ee8c332cbd72a23de5f8e2a32d0e2337";
 
@@ -29,24 +30,24 @@ const fetchGeolocationData = async (zipCode, countryCode = "US") => {
 };
 
 const fetchData = (zipCode) => {
-  fetchGeolocationData(zipCode).then((data) => {
+  fetchGeolocationData(zipCode).then((geolocationData) => {
+    console.log(geolocationData);
 
-    console.log(data);
+    const latitude = geolocationData.lat;
 
-    const latitude = data.lat;
+    const longitude = geolocationData.lon;
 
-    const longitude = data.lon;
+    // console.log(weatherData)
+    // renderOverviewData(weatherData);
 
-    fetchWeatherData(latitude, longitude).then(weatherData=> {
+    const weatherData = fetchWeatherData(latitude, longitude);
+    const forecastData = fetchForecast(latitude, longitude);
 
-      console.log(weatherData)
-      renderOverviewData(weatherData);
-    });
-
-    fetchForecast(latitude, longitude).then(data => {
-
-    });
-
+    Promise.all([weatherData, forecastData]).then((data) => {
+      console.log(data);
+      renderOverviewData(data[0]);
+      renderInformationData(data[0], data[1]);
+    }).catch(error => console.log(error));
   });
 };
 
