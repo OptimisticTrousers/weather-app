@@ -1,4 +1,4 @@
-export default function renderInformationData(weatherData, forecastData) {
+export default function renderWeatherDetails(weatherData) {
   const description = document.querySelector(
     ".weather-detail.description > p:nth-child(1)"
   );

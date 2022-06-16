@@ -1,5 +1,5 @@
 import renderOverviewData from "./modules/overview";
-import renderInformationData from "./modules/info";
+import renderWeatherDetails from "./modules/info";
 
 const API_KEY = "ee8c332cbd72a23de5f8e2a32d0e2337";
 
@@ -46,7 +46,7 @@ const fetchData = (zipCode) => {
     Promise.all([weatherData, forecastData]).then((data) => {
       console.log(data);
       renderOverviewData(data[0]);
-      renderInformationData(data[0], data[1]);
+      renderWeatherDetails(data[0]);
     }).catch(error => console.log(error));
   });
 };
