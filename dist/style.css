@@ -30,7 +30,7 @@ main {
 div.info {
   grid-area: aside;
   display: flex;
-  background-color: red;
+  background-color: rgba(15,64,88,0.85);
   flex-direction: column;
   overflow: auto;
 }
@@ -58,11 +58,11 @@ div.overview > p:nth-child(1) {
 
 .weather-type > p, .location > p:nth-child(2){
   margin: 0;
-  font-size: 24px;
+  font-size: 28px;
 }
 h1 {
   grid-area: title;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .recent-location,
