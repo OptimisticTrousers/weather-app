@@ -7,10 +7,10 @@ export default function addCityToHistory(weatherData) {
   const cityName = document.createElement("p");
   cityName.textContent = weatherData.name;
 
-  cityName.addEventListener('click', () => {
+  cityName.addEventListener("click", () => {
     renderWeatherDetails(weatherData);
-    renderOverviewData(weatherData)
-  })
+    renderOverviewData(weatherData);
+  });
 
   history.appendChild(cityName);
   history.removeChild(history.firstChild);

@@ -1,3 +1,4 @@
+
 import fetchData from "..";
 
 const button = document.querySelector("button");
@@ -17,4 +18,4 @@ button.addEventListener("click", (event) => {
   form.reset();
 });
 
-fetchData("07094");
+fetchData("07094")
