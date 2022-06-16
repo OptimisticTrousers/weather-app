@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap");
 
 body {
   min-height: 100vh;
   background-image: url("/dist/images/watercolor-background.jpg");
   display: grid;
   color: #e8dfdc;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 main {
@@ -22,17 +23,13 @@ main {
   height: 90%;
   border-radius: 15px;
   background-size: cover;
+  background-image: url("images/overcast.jpg");
   justify-content: end;
 }
 
-.background{
-  background-image: url("images/cloud.jpg");
-
-}
-
-.day-forecast{
-    display: flex;
-    justify-content: space-evenly;
+.day-forecast {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .weather-detail > p:nth-child(2) {
@@ -45,7 +42,7 @@ div.info {
   background-color: rgba(15, 64, 88, 0.85);
   flex-direction: column;
   overflow: auto;
-  font-family: 'Fira Sans';
+  font-family: "Fira Sans";
 }
 
 div.overview {
@@ -80,8 +77,8 @@ div.overview > p:nth-child(1) {
   font-size: 32px;
 }
 
-.location > p.type{
-    font-size: 24px;
+.location > p.type {
+  font-size: 24px;
 }
 h1 {
   grid-area: title;
@@ -92,9 +89,9 @@ h2 {
   font-weight: bolder;
   color: #e8dfdc;
 }
-div.cities > p:hover{
-    cursor: pointer;
-    color: #EBF5EE;
+div.cities > p:hover {
+  cursor: pointer;
+  color: #ebf5ee;
 }
 
 .recent-location,
@@ -108,8 +105,8 @@ div.cities > p:hover{
   width: 100%;
   margin: 0 auto;
 }
-.forecast > h2{
-    text-align: center;
+.forecast > h2 {
+  text-align: center;
 }
 
 .recent-location {
@@ -163,10 +160,9 @@ button {
   border-radius: inherit;
 }
 
-button:hover{
-
-    cursor: pointer;
-    background-color: #F18F01;
+button:hover {
+  cursor: pointer;
+  background-color: #f18f01;
 }
 
 .weather-detail {
