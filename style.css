@@ -11,57 +11,72 @@ body {
 }
 
 main {
-    margin: auto;
-    display: grid;
-    grid-template-areas: 
+  margin: auto;
+  display: grid;
+  grid-template-areas:
     "title . . aside aside"
     ". . . aside aside"
     ". . . aside aside"
     ". . . aside aside"
     "overview overview . aside aside";
-    grid-template-columns: repeat(3, 25%) repeat(2, 1fr);
-    width: 60%;
-    height: 80%;
-    background-image: url('images/test.jpg');
-    background-size: cover;
-    justify-content: end;
+  grid-template-columns: repeat(3, 25%) repeat(2, 1fr);
+  width: 60%;
+  height: 80%;
+  background-image: url("images/finalweather.jpg");
+  background-size: cover;
+  justify-content: end;
 }
 
-div.info{
-    grid-area: aside;
-    display: flex;
-    background-color: red;
-    flex-direction: column;
-    gap: 100px;
+div.info {
+  grid-area: aside;
+  display: flex;
+  background-color: red;
+  flex-direction: column;
 }
 
-div.overview{
-    grid-area: overview;
-    background-color: red;
-    width: 100%;
-}
-h1{
-    grid-area: title;
-}
 
-.recent-location > p, .weather-detail > p{
-    
-line-height: 2rem;
+div.overview {
+display: flex;
+  grid-area: overview;
+  background-color: red;
+  width: 100%;
+  padding-left: 2rem;
+  padding-top: 2rem;
 }
-
-.weather-details > h2{
-line-height: 6rem;
+div.overview > p:nth-child(1){
+    font-size: 72px;
+}
+h1 {
+  grid-area: title;
 }
 
-button{
-
-    background-color: #ef7901;
-    border: 0;
-    width: 100px;
-    height: 100px;
+.recent-location{
+    border-bottom: 1px solid white;
 }
 
-.weather-detail{
+form > div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.recent-location > p,
+.weather-detail > p {
+  line-height: 2rem;
+}
+
+.weather-details > h2 {
+  line-height: 6rem;
+}
+
+button {
+  background-color: #ef7901;
+  border: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.weather-detail {
+  display: flex;
+  justify-content: space-between;
 }
