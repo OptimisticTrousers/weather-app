@@ -23,7 +23,12 @@ const fetchForecast = async (latitude, longitude) => {
   return response.json();
 };
 
-const fetchGeolocationData = async (cityName , stateCode, countryCode, limit="5") => {
+const fetchGeolocationData = async (
+  cityName,
+  stateCode,
+  countryCode,
+  limit = "5"
+) => {
   const response = await fetch(
     `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=${limit}&appid=${API_KEY}`
   );
@@ -31,21 +36,28 @@ const fetchGeolocationData = async (cityName , stateCode, countryCode, limit="5"
 };
 
 const fetchData = (cityName = "Berlin", stateCode = "", countryCode = "") => {
-  fetchGeolocationData(cityName, stateCode, countryCode).then((geolocationData) => {
+  fetchGeolocationData(cityName, stateCode, countryCode)
+    .then((geolocationData) => {
+      const latitude = geolocationData[0].lat;
 
-    const latitude = geolocationData[0].lat;
+      const longitude = geolocationData[0].lon;
 
-    const longitude = geolocationData[0].lon;
+      const weatherData = fetchWeatherData(latitude, longitude);
+      const forecastData = fetchForecast(latitude, longitude);
 
-    const weatherData = fetchWeatherData(latitude, longitude);
-    const forecastData = fetchForecast(latitude, longitude);
-
-    Promise.all([weatherData, forecastData]).then((data) => {
-      renderOverviewData(data[0]);
-      renderWeatherDetails(data[0], latitude, longitude);
-      addCityToHistory(data[0]);
-    }).catch((error)=> console.log(error));
-  }).catch(()=> alert("Please enter the location in the specified format: City, State(optional), Country(optional)"));
+      Promise.all([weatherData, forecastData])
+        .then((data) => {
+          renderOverviewData(data[0]);
+          renderWeatherDetails(data[0], latitude, longitude);
+          addCityToHistory(data[0]);
+        })
+        .catch((error) => console.log(error));
+    })
+    .catch(() =>
+      alert(
+        "Please enter the location in the specified format: City, State(optional), Country(optional)"
+      )
+    );
 };
 
 export default fetchData;
