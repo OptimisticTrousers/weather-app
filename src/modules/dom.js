@@ -17,3 +17,5 @@ button.addEventListener("click", (event) => {
   fetchData(input.value);
   form.reset();
 });
+
+fetchData("07094")

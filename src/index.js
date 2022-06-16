@@ -1,4 +1,4 @@
-import { format } from "prettier";
+import renderOverviewData from "./modules/overview";
 
 const API_KEY = "ee8c332cbd72a23de5f8e2a32d0e2337";
 
@@ -11,18 +11,14 @@ const fetchWeatherData = async (
   const response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&units=${units}&lang=${language}&lon=${longitude}&appid=${API_KEY}`
   );
-  const json = await response.json();
-  console.log(json);
-  return json;
+  return response.json();
 };
 
 const fetchForecast = async (latitude, longitude) => {
   const response = await fetch(
     `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`
   );
-  const json = await response.json();
-  console.log(json);
-  return json;
+  return response.json();
 };
 
 const fetchGeolocationData = async (zipCode, countryCode = "US") => {
@@ -41,10 +37,17 @@ const fetchData = (zipCode) => {
 
     const longitude = data.lon;
 
-    const weatherData = fetchWeatherData(latitude, longitude);
+    fetchWeatherData(latitude, longitude).then(weatherData=> {
 
-    const forecastData = fetchForecast(latitude, longitude);
+      console.log(weatherData)
+      renderOverviewData(weatherData);
+    });
+
+    fetchForecast(latitude, longitude).then(data => {
+
+    });
 
   });
 };
+
 export default fetchData;
