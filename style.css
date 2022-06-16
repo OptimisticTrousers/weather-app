@@ -168,6 +168,11 @@ button:hover {
   background-color: #f18f01;
 }
 
+footer{
+    text-decoration: dotted;
+    text-align: center;
+}
+
 .weather-detail {
   display: flex;
   justify-content: space-between;
@@ -183,6 +188,12 @@ button:hover {
       "aside aside aside";
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 3rem;
+  }
+  footer{
+    color: black;
+  }
+  footer > a:hover{
+    color: #0A0A0A;
   }
   .location > p.time{
     font-size: 3vw;
