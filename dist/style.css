@@ -1,8 +1,8 @@
-
 body {
   min-height: 100vh;
   background-image: url("/dist/images/watercolor-background.jpg");
   display: grid;
+  color: #e8dfdc;
 }
 
 main {
@@ -23,6 +23,10 @@ main {
   justify-content: end;
 }
 
+.weather-detail > p:nth-child(2) {
+  color: #e6eced;
+}
+
 div.info {
   grid-area: aside;
   display: flex;
@@ -31,11 +35,10 @@ div.info {
   overflow: auto;
 }
 
-
 div.overview {
-display: flex;
-justify-content: space-evenly;
-align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   grid-area: overview;
   background-color: red;
   width: 100%;
@@ -44,48 +47,53 @@ align-items: center;
 }
 
 div.info p {
-    font-size: 20px;
+  font-size: 20px;
 }
-div.overview > p:nth-child(1){
-    font-size: 72px;
+div.overview > p:nth-child(1) {
+  font-size: 72px;
 }
 .location > p {
-    margin: 0;
-    font-size: 40px; 
+  margin: 0;
+  font-size: 40px;
 }
 
 .weather-type > p {
-    margin: 0;
-    font-size: 28px; 
+  margin: 0;
+  font-size: 28px;
 }
 h1 {
   grid-area: title;
   padding: 2rem;
 }
 
-.recent-location, .weather-details{
-    border-bottom: 1px solid white;
-    width: 70%;
-    margin: 0 auto;
+.recent-location,
+.weather-details {
+  border-bottom: 1px solid white;
+  width: 70%;
+  margin: 0 auto;
 }
 
-form{
-    padding-bottom: 2rem;
-}
-form > div{
-    display: flex;
-    justify-content: space-between;
+.recent-location {
+  color: #9ea9ae;
 }
 
-label{
-    padding-top: 3rem;
-    padding-left: 2.5rem;
-    align-self: end;
+form {
+  padding-bottom: 2rem;
+}
+form > div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.recent-location, .weather-details{
+label {
+  padding-top: 3rem;
+  padding-left: 3rem;
+  align-self: end;
+}
 
-    padding-left: 1.5rem;
+.recent-location,
+.weather-details {
+  padding-left: 1.5rem;
 }
 
 .recent-location > p,
@@ -94,14 +102,14 @@ label{
 }
 
 .weather-details > h2 {
-  line-height: 6rem;
+  line-height: 4rem;
 }
 
 button {
   background-color: #ef7901;
   border: 0;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: inherit;
 }
 
