@@ -1,6 +1,3 @@
-const form = document.getElementsByTagName('form')[0];
+import fetchGeolocationData from "..";
 
-form.addEventListener('submit', (event) => {
 
-    event.preventDefault();
-})

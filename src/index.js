@@ -35,4 +35,13 @@ const fetchGeolocationData = (zipCode, countryCode = "US") => {
 };
 export default fetchGeolocationData;
 
+const button = document.querySelector('button');
+
+button.addEventListener('click', ()=> {
+
+    const input = document.querySelector('input');
+
+    console.log(fetchGeolocationData(input.value));
+
+})
 fetchGeolocationData("07087");
