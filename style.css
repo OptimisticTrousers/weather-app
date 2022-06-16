@@ -19,6 +19,7 @@ main {
     ". . . aside aside"
     "overview overview . aside aside";
   grid-template-columns: repeat(3, 24%) repeat(2, 1fr);
+  grid-auto-rows: min-content;
   width: 70vw;
   height: 90vh;
   border-radius: 15px;
@@ -52,6 +53,9 @@ div.overview {
   align-items: center;
   grid-area: overview;
   width: 100%;
+
+  padding-left: 6rem;
+  padding-bottom: 1rem;
   gap: 10px;
 }
 
@@ -60,19 +64,19 @@ div.info p {
 }
 div.overview > p:nth-child(1) {
   font-weight: 600;
-  font-size: 120px;
+  font-size: 5vw;
 }
 .location > p.city {
   margin: 0;
   font-weight: 500;
-  font-size: 80px;
+  font-size: 4vw;
 }
 
 .weather-type > p,
 .location > p:nth-child(2) {
   font-weight: 500;
   margin: 0;
-  font-size: 32px;
+  font-size: 2vw;
 }
 
 .location > p.type {
@@ -80,7 +84,8 @@ div.overview > p:nth-child(1) {
 }
 h1 {
   grid-area: title;
-  padding: 3rem;
+  padding-left: 3rem;
+  padding-top: 1rem;
 }
 
 h2 {
@@ -167,7 +172,22 @@ button:hover {
   display: flex;
   justify-content: space-between;
 }
-
 @media (max-width: 1080px) {
-    
+  main {
+    width: 70%;
+    height: 90%;
+    grid-template-areas:
+      "title . ."
+      ". . ."
+      "overview overview overview"
+      "aside aside aside";
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 3rem;
+  }
+  div.overview{
+    padding: 0;
+  }
+  div.info{
+    height: inherit
+  }
 }
