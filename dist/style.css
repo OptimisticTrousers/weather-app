@@ -177,6 +177,16 @@ footer{
   display: flex;
   justify-content: space-between;
 }
+.github-logo{
+    overflow: hidden;
+    transition-duration: 1s;
+    transition-property:transform;
+}
+.github-logo:hover{
+
+transform:rotate(360deg);
+}
+
 @media (max-width: 1080px) {
   main {
     width: 70%;
