@@ -1,4 +1,3 @@
-
 import fetchData from "..";
 
 const button = document.querySelector("button");
@@ -13,8 +12,8 @@ button.addEventListener("click", (event) => {
   event.preventDefault();
   const input = document.querySelector("input");
 
-  console.log(input.value);
-  fetchData();
+  const [city, state, country] = input.value.split(",");
+  fetchData(city, state, country);
   form.reset();
 });
 

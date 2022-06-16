@@ -5,7 +5,7 @@ export default function renderOverviewData(weatherData) {
   const weatherType = document.querySelector(".weather-type > p");
 
   degrees.textContent = `${Math.round(weatherData.main.temp)}°`;
-  city.textContent = weatherData.name;
+  city.textContent = `${weatherData.name}, ${weatherData.sys.country}`;
   time.textContent = weatherData.dt;
   weatherType.textContent = weatherData.weather[0].main;
 }

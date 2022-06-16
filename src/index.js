@@ -30,7 +30,7 @@ const fetchGeolocationData = async (cityName , stateCode, countryCode, limit="5"
   return response.json();
 };
 
-const fetchData = (cityName = "London", stateCode = "", countryCode = "") => {
+const fetchData = (cityName = "Berlin", stateCode = "", countryCode = "") => {
   fetchGeolocationData(cityName, stateCode, countryCode).then((geolocationData) => {
 
     const latitude = geolocationData[0].lat;
