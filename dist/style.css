@@ -213,7 +213,7 @@ transform:rotate(360deg);
     padding-left: 1rem;
   }
   div.info{
-    height: inherit
+    height: inherit;
   }
   button{
     width: 70px;
