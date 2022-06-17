@@ -215,4 +215,8 @@ transform:rotate(360deg);
   div.info{
     height: inherit
   }
+  button{
+    width: 70px;
+    height: 70px;
+  }
 }
