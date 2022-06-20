@@ -2,7 +2,7 @@
 
 body {
   min-height: 100vh;
-  background-image: url("images/watercolor-background.jpg");
+  background-image: url("./images/watercolor-background.jpg");
   display: grid;
   color: #e8dfdc;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -24,7 +24,7 @@ main {
   height: 90vh;
   border-radius: 15px;
   background-size: cover;
-  background-image: url("images/overcast.jpg");
+  background-image: url("./images/overcast.jpg");
   justify-content: end;
 }
 
