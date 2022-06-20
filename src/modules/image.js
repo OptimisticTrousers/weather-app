@@ -1,6 +1,5 @@
 export default function renderImage(condition) {
   const main = document.querySelector("main");
-
   const weatherCondition = condition.toLowerCase();
 
   if (weatherCondition.includes("thunder")) {
