@@ -27,6 +27,7 @@ main {
   height: 90vh;
   border-radius: 15px;
   background-size: cover;
+  width: auto;
   justify-content: end;
 }
 
@@ -197,6 +198,7 @@ footer {
       ". . ."
       "overview overview overview"
       "aside aside aside";
+      display: block;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 3rem;
   }
@@ -212,10 +214,6 @@ footer {
   div.overview {
     padding: 0;
     padding-left: 1rem;
-  }
-  div.info {
-    width: inherit;
-    height: inherit;
   }
   button {
     width: 70px;
