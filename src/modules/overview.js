@@ -1,5 +1,5 @@
 import fromUnixTime from "date-fns/fromUnixTime";
-import renderImage from "./image";
+import renderImage from "../../dist/image";
 
 export default function renderOverviewData(weatherData) {
   const degrees = document.querySelector("p.degrees");
