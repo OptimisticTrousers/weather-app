@@ -53,11 +53,6 @@ const fetchData = (cityName = "Berlin", stateCode = "", countryCode = "") => {
         })
         .catch((error) => console.log(error));
     })
-    .catch(() =>
-      alert(
-        "Please enter the location in the specified format: City, State(optional), Country(optional)"
-      )
-    );
 };
 
 export default fetchData;
