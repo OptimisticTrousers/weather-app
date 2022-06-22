@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap");
+html {
+  height: 100%;
+}
 
 body {
   min-height: 100vh;
@@ -167,23 +170,22 @@ button:hover {
   background-color: #f18f01;
 }
 
-footer{
-    text-decoration: dotted;
-    text-align: center;
+footer {
+  text-decoration: dotted;
+  text-align: center;
 }
 
 .weather-detail {
   display: flex;
   justify-content: space-between;
 }
-.github-logo{
-    overflow: hidden;
-    transition-duration: 1s;
-    transition-property:transform;
+.github-logo {
+  overflow: hidden;
+  transition-duration: 1s;
+  transition-property: transform;
 }
-.github-logo:hover{
-
-transform:rotate(360deg);
+.github-logo:hover {
+  transform: rotate(360deg);
 }
 
 @media (max-width: 1080px) {
@@ -198,23 +200,24 @@ transform:rotate(360deg);
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 3rem;
   }
-  footer{
+  footer {
     color: black;
   }
-  footer > a:hover{
-    color: #0A0A0A;
+  footer > a:hover {
+    color: #0a0a0a;
   }
-  .location > p.time{
+  .location > p.time {
     font-size: 3vw;
   }
-  div.overview{
+  div.overview {
     padding: 0;
     padding-left: 1rem;
   }
-  div.info{
+  div.info {
+    width: inherit;
     height: inherit;
   }
-  button{
+  button {
     width: 70px;
     height: 70px;
   }
