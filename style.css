@@ -24,7 +24,6 @@ main {
   height: 90vh;
   border-radius: 15px;
   background-size: cover;
-  background-image: url("./images/overcast.jpg");
   justify-content: end;
 }
 
