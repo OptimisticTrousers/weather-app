@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100%;
   background-image: url("./images/watercolor-background.jpg");
   display: grid;
   color: #e8dfdc;
@@ -29,6 +29,8 @@ main {
   background-size: cover;
   width: auto;
   justify-content: end;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .day-forecast {
@@ -174,6 +176,7 @@ button:hover {
 footer {
   text-decoration: dotted;
   text-align: center;
+  padding: 2rem 0rem;
 }
 
 .weather-detail {
@@ -200,18 +203,14 @@ footer {
       "aside aside aside";
     display: block;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 3rem;
   }
   h1 {
     padding-left: 1.5rem;
     padding-top: 0.5rem;
-    font-size: 20px;
+    font-size: 24px;
   }
   footer {
-    color: black;
-  }
-  footer > a:hover {
-    color: #0a0a0a;
+    display: none;
   }
   .location > p.time {
     font-size: 3vw;
